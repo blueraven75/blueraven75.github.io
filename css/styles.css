@@ -8,7 +8,8 @@
 
 }
 .navbar-default .navbar-nav>li>a{
-  color: rgb(20, 163, 220);
+  /*color: rgb(20, 163, 220);*/
+  color: yellow;
 }
 /*body*/
 body{
@@ -91,10 +92,10 @@ footer{
 .footer-border{
   border-left: 2px solid #333;
 }
-address{
+/*address{
   color: #fff;
   padding: 20px 0px;
-}
+}*/
 #footer-content{
   margin-top: 15px;
 }
