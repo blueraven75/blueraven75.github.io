@@ -11,6 +11,7 @@
   /*color: rgb(20, 163, 220);*/
   color: yellow;
 }
+
 /*body*/
 body{
   background-image: url('https://hd.unsplash.com/photo-1471523094700-e1ec9d935a90');
@@ -82,7 +83,7 @@ p{
 }
 footer{
   background-color: rgba( 20, 20, 20, .6);
-  min-height: 150px;
+  min-height: 350px;
   color: #fff;
 }
 
@@ -104,3 +105,27 @@ i{
 
 }
 /*contact info*/
+.btn-group-lg>.btn, .btn-lg{
+  margin-left: 600px;
+}
+.modal{
+  position: fixed;
+  right: 0;
+  top: none:
+  bottom: 0;
+  left: 0;
+  z-index: 1050;
+  display: none;
+  overflow: hidden;
+  /*-webkit-overflow-scrolling: touch;*/
+  outline: 0;
+}
+.modal-content{
+  margin-top: 118px;
+}
+/*media*/
+@media screen and (max-width: 768px) {
+  .jumbotron {
+    margin-top: 125px;
+  }
+}
