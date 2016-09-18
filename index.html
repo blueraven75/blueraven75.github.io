@@ -9,6 +9,33 @@
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
 	<link rel="stylesheet" href="css/styles.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+  // Add smooth scrolling to all links
+  $("a").on('click', function(event) {
+
+    // Make sure this.hash has a value before overriding default behavior
+    if (this.hash !== "") {
+      // Prevent default anchor click behavior
+      event.preventDefault();
+
+      // Store hash
+      var hash = this.hash;
+
+      // Using jQuery's animate() method to add smooth page scroll
+      // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+      $('html, body').animate({
+        scrollTop: $(hash).offset().top
+      }, 800, function(){
+
+        // Add hash (#) to URL when done scrolling (default click behavior)
+        window.location.hash = hash;
+      });
+    } // End if
+  });
+});
+</script>
 </head>
 <body>
   <!-- nav begins -->
@@ -29,9 +56,9 @@
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
           <ul class="nav navbar-nav navbar-right">
             <!-- <li><a href="#">home</a></li> -->
-            <li><a href="#">about</a></li>
-            <li><a href="#">featured</a></li>
-            <li><a href="#">contact</a></li>
+            <li><a href="#about">about</a></li>
+            <li><a href="#featured">featured</a></li>
+            <li><a href="#contact">contact</a></li>
           </ul>
         </div><!-- /.navbar-collapse -->
       </div><!-- /.container-fluid -->
@@ -47,7 +74,7 @@
   <div class="container" id="our_story_wrapper">
     <div class="row">
       <div class="col-md-3">
-        <h1 class="text-center" id="our_story">about</h1>
+        <h1 class="text-center" id="about" id="our_story">about</h1>
         <p class="text-center" id="our_story_subtext">Lorem ipsum dolor sit amet</p>
       </div>
       <div class="col-md-offset-3 col-md-6">
@@ -61,7 +88,7 @@
   </div>
   <!-- content about ends -->
   <!-- featured work -->
-  <h1 class="featured-h1">featured work</h1>
+  <h1 class="featured-h1" id="featured">featured work</h1>
   <div class="container" id="our_story_wrapper">
     <div class="row">
       <a href="#">
@@ -99,26 +126,71 @@ https://geekwiseb2.github.io/restaurante-blueraven75/">
   </div>
   <!-- featured work ends -->
   <!-- footer -->
-  <h1>contact info</h1>
-   <footer class="container-fluid">
-  	<div class="row">
-  		<div class="col-md-9 col-xs-12" id="footer-content">
-  			<div class="col-md-4 col-xs-12">
-  				<i class="fa fa-facebook" aria-hidden="true">facebook</i>
-  			</div>
-  			<div class="col-md-4 col-xs-12 footer-border">
-          logo
-  			</div>
-  			<div class="col-md-4 col-xs-12 footer-border">
-          logo
-  			</div>
-  		</div>
-  	</div>
+  <h1 id="contact">contact info</h1>
+  <div class="contact">
+
+        <div class="section-name">
+            Contact
+        </div>
+        <div class="contact-container">
+            <div class="contact-overlay">
+              <div class="contact-modal">
+
+                <form method="post" action="contactengine.php">
+                  <div class="close-btn"><i class="fa fa-times fa-lg" aria-hidden="true"></i></div>
+                  <div id="top-line">
+                    <input type="text" name="Name" id="Name" placeholder="Name"/>
+
+                    <input type="text" name="Email" id="Email" placeholder="Email"/>
+                  </div>
+                  <div id="bottom-line">
+                    <textarea name="Message" rows="10" cols="20" id="Message" placeholder="Message"></textarea>
+                  </div>
+                  <input type="submit" name="submit" value="Send" class="submit-button" />
+                </form>
+              </div>
+            </div>
+
+            <div class="contact-intro">
+                Need a website? Want it hand coded by a lifelong student of all things web?
+            </div>
+            <div class="email-container">
+              <i class="fa fa-envelope-o fa-5x" aria-hidden="true"></i>
+              <div class="email-me">Email Me </div>
+            </div>
+        </div>
+    </div>
+
+  <footer>
+    <!-- Button trigger modal -->
+      <!-- <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">
+        contact
+      </button> -->
+
+      <!-- Modal -->
+      <!-- <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+              <h4 class="modal-title" id="myModalLabel">Modal title</h4>
+            </div>
+            <div class="modal-body">
+              ...
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+              <button type="button" class="btn btn-primary">Save changes</button>
+            </div>
+          </div>
+        </div>
+      </div> -->
   </footer>
   <!-- footer ends -->
   <!-- javascript	 -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+   <script src="https://code.jquery.com/jquery-3.0.0.min.js" integrity="sha256-JmvOoLtYsmqlsWxa7mDSLMwa6dZ9rrIdtrrVYRnDRH0=" crossorigin="anonymous"></script>
   <!-- <script src="js/bootstrap.min.js"></script> -->
 </body>
 </html>
